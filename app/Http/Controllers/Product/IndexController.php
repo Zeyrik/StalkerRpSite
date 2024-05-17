@@ -11,9 +11,14 @@ class IndexController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function index(Request $request)
     {
         $products = Product::all();
         return view('shop', compact('products'));
     }
+    public function show($id){
+        $product = Product::find($id);
+        return view('product', compact('product'));
+    }
+
 }

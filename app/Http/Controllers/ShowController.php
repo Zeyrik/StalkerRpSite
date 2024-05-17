@@ -12,7 +12,6 @@ class ShowController extends Controller
      */
     public function __invoke($id)
     {
-        $product = Product::find($id);
-        return view('product', compact('product'));
+
     }
 }

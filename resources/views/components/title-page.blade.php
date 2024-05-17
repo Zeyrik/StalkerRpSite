@@ -1,0 +1,1 @@
+<h2 class="text-white text-4xl mb-3">{{ $title }}</h2>

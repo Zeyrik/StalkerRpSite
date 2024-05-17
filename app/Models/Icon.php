@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class tag_rule extends Model
+class Icon extends Model
 {
     use HasFactory, SoftDeletes;
+
     protected $fillable = [
-
+        'title_icon',
+        'url',
+        'icon_url'
     ];
-
-    public function rules(){
-        return $this->hasMany(Rule::class);
-    }
 }

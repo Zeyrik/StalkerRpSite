@@ -10,9 +10,6 @@
         <li>
           <x-profile-link href="{{ route('profile') }}" text="Профиль"></x-profile-link>
         </li>
-        <li>
-          <x-profile-link href='#' text="Настройки"></x-profile-link>
-        </li>
       </ul>
       <div class="py-2">
         <x-profile-link href='{{ route("logout") }}' text="Выйти"></x-profile-link>

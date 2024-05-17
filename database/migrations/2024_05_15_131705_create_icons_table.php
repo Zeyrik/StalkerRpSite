@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rules', function (Blueprint $table) {
+        Schema::create('icons', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tag_rule_id');
-            $table->string('rule');
+            $table->string('title_icon')->nullable();
+            $table->string('url');
+            $table->string('icon_url');
             $table->timestamps();
-
-            $table->foreign('tag_rule_id')->references('id')->on('tag_rules');
             $table->softDeletes();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rules');
+        Schema::dropIfExists('icons');
     }
 };

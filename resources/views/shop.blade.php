@@ -5,22 +5,27 @@
             <div class="rounded-[46px] mb-[40px] h-[250px] w-full bg-cover bg-no-repeat bg-center bg-[url('https://media.moddb.com/images/members/4/3659/3658732/profiledetector/ZsR9M3opVZE.jpg')]" >
                 {{-- <button class="bg-red-500 mt-[200px]">Покупать</button> --}}
             </div>
+            <swiper-container slides-per-view="1" speed="500"  autoplay='true'  pagination-type='bullets' pagination-clickable='true'> 
+                <swiper-slide class="bg-green-200">
+                    <img src="">
+                </swiper-slide>
+                <swiper-slide class="bg-blue-300">
+                    <img src="">
+                </swiper-slide>
+                <swiper-slide class="bg-red-400">
+                    <img src="">
+                </swiper-slide>
+              </swiper-container>
             <div class="bg-[#202123] p-8 rounded-[46px]">
-                <h3 class="mb-3 text-4xl text-white">Каталог</h3>
+                <x-title-page title='Каталог'></x-title-page>
                 <div class="grid grid-cols-4 gap-5">
-                    @if(count($products)>=1)
-                    @foreach ($products as $product)
-                    <a href="{{ route('product', $product->id) }}">
-                        <div class=" bg-[#29262d] p-5 rounded-[23px] flex flex-col items-center h-full">
-                            <img src="{{ $product->image }}" alt="">
-                            <p class="text-white mt-auto">{{ $product->title }}</p>
-                            <p class="text-white">{{$product->price}}руб.</p>
-                        </div>
-                    </a>
-                    @endforeach
-                @else
+
+
+                @forelse ($products as $product)
+                    <x-card-product id='{{ $product->id }}' title="{{ $product->title }}" image='{{ $product->image }}' price='{{ $product->price }}'></x-card-product>
+                @empty
                     <p class="text-white">Товаров нет</p>
-                @endif
+                @endforelse
                 </div>
                 
             </div>
@@ -32,3 +37,4 @@
     </x-slot>
     
 </x-main-layout>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>

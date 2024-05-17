@@ -1,7 +1,5 @@
 
-    <a href="{{ route('login') }}"
-        class="flex items-center border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-        style="background-color: #5865F2;">
+    <a href="{{ route('login') }}" class="bg-[#29262d] rounded-[24px] text-[#666] hover:text-white hover:bg-[#65abec] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
        
         <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="800px" height="800px" viewBox="0 -28.5 256 256" version="1.1" preserveAspectRatio="xMidYMid">
@@ -17,3 +15,4 @@
         <span>Connect with Discord</span>
 
     </a>
+    

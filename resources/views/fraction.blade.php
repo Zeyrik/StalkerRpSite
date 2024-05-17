@@ -2,7 +2,7 @@
     <x-slot name='title'>Группировки</x-slot>
     <x-slot name='content'>
         <div>
-            <h2 class="mb-3">Группировки</h2>
+            <x-title-page title='Группировки'></x-title-page>
             @foreach ($fractions as $fraction)
             <div>
                 <img src="{{ $fraction->image }}">
