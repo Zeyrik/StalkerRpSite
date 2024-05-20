@@ -34,6 +34,7 @@ class RuleResource extends ModelResource
                 BelongsTo::make("Тег правила", 'tagRule', resource: new TagRulesResource()),
                 ID::make()->sortable(),
                 Text::make('Правило','rule')->required(),
+                Text::make('Id Правила','rule_id')->required(),
             ]),
         ];
     }
